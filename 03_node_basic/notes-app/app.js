@@ -1,10 +1,13 @@
-const validator = require('validator');
+const chalk = require('chalk');
 const getNotes = require('./notes');
 
 console.log(getNotes());
-console.log(validator.isEmail('jack@test.com'));
+console.log(chalk.green('Success!!!'));
+console.log(chalk.bold.green('bold green!'));
+console.log(chalk.inverse.green('inverse green!'));
+console.log(chalk.inverse.bold.green('inverse bold green!'));
 console.log(
-  validator.isURL(
-    'https://www.udemy.com/course/the-complete-nodejs-developer-course-2/learn/lecture/13728848#overview'
-  )
+  `npm ${chalk.inverse.yellow(
+    'WARN'
+  )} notes-app@1.0.0 No description... just joking!`
 );
